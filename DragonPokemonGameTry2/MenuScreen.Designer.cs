@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             textBox1 = new TextBox();
+            BTNPlay = new Button();
+            BTNBestiary = new Button();
+            BTNQuit = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -43,11 +46,41 @@
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // BTNPlay
+            // 
+            BTNPlay.Location = new Point(365, 176);
+            BTNPlay.Name = "BTNPlay";
+            BTNPlay.Size = new Size(149, 77);
+            BTNPlay.TabIndex = 1;
+            BTNPlay.Text = "Play";
+            BTNPlay.UseVisualStyleBackColor = true;
+            // 
+            // BTNBestiary
+            // 
+            BTNBestiary.Location = new Point(365, 317);
+            BTNBestiary.Name = "BTNBestiary";
+            BTNBestiary.Size = new Size(149, 77);
+            BTNBestiary.TabIndex = 2;
+            BTNBestiary.Text = "Bestiary";
+            BTNBestiary.UseVisualStyleBackColor = true;
+            // 
+            // BTNQuit
+            // 
+            BTNQuit.Location = new Point(365, 471);
+            BTNQuit.Name = "BTNQuit";
+            BTNQuit.Size = new Size(149, 77);
+            BTNQuit.TabIndex = 3;
+            BTNQuit.Text = "Quit";
+            BTNQuit.UseVisualStyleBackColor = true;
+            // 
             // MenuScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(934, 632);
+            Controls.Add(BTNQuit);
+            Controls.Add(BTNBestiary);
+            Controls.Add(BTNPlay);
             Controls.Add(textBox1);
             Name = "MenuScreen";
             Text = "MenuScreen";
@@ -58,5 +91,8 @@
         #endregion
 
         private TextBox textBox1;
+        private Button BTNPlay;
+        private Button BTNBestiary;
+        private Button BTNQuit;
     }
 }
