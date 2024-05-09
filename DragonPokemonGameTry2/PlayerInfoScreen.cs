@@ -63,5 +63,16 @@ namespace DragonPokemonGameTry2
         {
 
         }
+
+        private void BTNP1Details_Click(object sender, EventArgs e)
+        {
+            saveP1values();
+        }
+
+        public bool saveP1values()
+        {
+            bool isp1Saved = false;
+            return true;
+        }
     }
 }

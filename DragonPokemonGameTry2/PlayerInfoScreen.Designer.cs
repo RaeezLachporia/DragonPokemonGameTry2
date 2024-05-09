@@ -168,6 +168,7 @@
             BTNP1Details.TabIndex = 0;
             BTNP1Details.Text = "Save Player 1 details";
             BTNP1Details.UseVisualStyleBackColor = true;
+            BTNP1Details.Click += BTNP1Details_Click;
             // 
             // GBP2details
             // 
