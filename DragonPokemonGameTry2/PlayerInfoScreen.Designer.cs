@@ -71,6 +71,7 @@
             GBP1details.TabIndex = 0;
             GBP1details.TabStop = false;
             GBP1details.Text = "Player 1 details";
+            GBP1details.Enter += GBP1details_Enter;
             // 
             // TXTPlayer1DragonName
             // 
