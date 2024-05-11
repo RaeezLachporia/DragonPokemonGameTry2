@@ -12,10 +12,10 @@ namespace DragonPokemonGameTry2
 {
     public partial class PlayerInfoScreen : Form
     {
-        String[] P1data;
-        String[] P2data;
-        int[] P1values;
-        int[] P2values;
+        String[] P1data = new string[2];
+        String[] P2data = new string[2];
+        int[] P1values = new int[4];
+        int[] P2values= new int[4];
 
         //ice dragon constants
         const String ICE_DRAG_NAME = " ";
@@ -69,10 +69,91 @@ namespace DragonPokemonGameTry2
             saveP1values();
         }
 
-        public bool saveP1values()
+        public void saveP1values()
         {
-            bool isp1Saved = false;
-            return true;
+            if (checkboxP1fire.Checked==true)
+            {
+                P1data[0] = TXTPlayer1Name.Text;
+                P1data[1] = TXTPlayer1DragonName.Text;
+
+                P1values[0] = FIRE_DRAG_HP;
+                P1values[1] = FIRE_DRAG_ATTACK;
+                P1values[2] = FIRE_DRAG_SPECIAL;
+                P1values[3] = FIRE_DRAG_BLOCK;
+            }
+            else if (checkBoxP1Water.Checked==true)
+            {
+                P1data[0] = TXTPlayer1Name.Text;
+                P1data[1] = TXTPlayer1DragonName.Text;
+
+                P1values[0] = ICE_DRAG_HP;
+                P1values[1] = ICE_DRAG_ATTACK;
+                P1values[2] = ICE_DRAG_SPECIAL;
+                P1values[3] = ICE_DRAG_BLOCK;
+            }
+            else if (checkBoxP1Wind.Checked == true)
+            {
+                P1data[0] = TXTPlayer1Name.Text;
+                P1data[1] = TXTPlayer1DragonName.Text;
+
+                P1values[0] = WIND_DRAG_HP;
+                P1values[1] = WIND_DRAG_ATTACK;
+                P1values[2] = WIND_DRAG_SPECIAL;
+                P1values[3] = WIND_DRAG_BLOCK;
+            }
+            else if (checkBoxP1Earth.Checked == true)
+            {
+                P1data[0] = TXTPlayer1Name.Text;
+                P1data[1] = TXTPlayer1DragonName.Text;
+
+                P1values[0] = EARTH_DRAG_HP;
+                P1values[1] = EARTH_DRAG_ATTACK;
+                P1values[2] = EARTH_DRAG_SPECIAL;
+                P1values[3] = EARTH_DRAG_BLOCK;
+            }
+        }
+        public void saveP2values()
+        {
+            if (checkBoxP2Fire.Checked == true)
+            {
+                P2data[0] = TXTPlayer2Name.Text;
+                P2data[1] = TXTPlayer2DragonName.Text;
+
+                P2values[0] = FIRE_DRAG_HP;
+                P2values[1] = FIRE_DRAG_ATTACK;
+                P2values[2] = FIRE_DRAG_SPECIAL;
+                P2values[3] = FIRE_DRAG_BLOCK;
+            }
+            else if (checkBoxP2Water.Checked == true)
+            {
+                P2data[0] = TXTPlayer2Name.Text;
+                P2data[1] = TXTPlayer2DragonName.Text;
+
+                P2values[0] = ICE_DRAG_HP;
+                P2values[1] = ICE_DRAG_ATTACK;
+                P2values[2] = ICE_DRAG_SPECIAL;
+                P2values[3] = ICE_DRAG_BLOCK;
+            }
+            else if (checkBoxP2Wind.Checked == true)
+            {
+                P2data[0] = TXTPlayer2Name.Text;
+                P2data[1] = TXTPlayer2DragonName.Text;
+
+                P2values[0] = WIND_DRAG_HP;
+                P2values[1] = WIND_DRAG_ATTACK;
+                P2values[2] = WIND_DRAG_SPECIAL;
+                P2values[3] = WIND_DRAG_BLOCK;
+            }
+            else if (checkBoxP2Earth.Checked == true)
+            {
+                P2data[0] = TXTPlayer2Name.Text;
+                P2data[1] = TXTPlayer2DragonName.Text;
+
+                P2values[0] = EARTH_DRAG_HP;
+                P2values[1] = EARTH_DRAG_ATTACK;
+                P2values[2] = EARTH_DRAG_SPECIAL;
+                P2values[3] = EARTH_DRAG_BLOCK;
+            }
         }
     }
 }

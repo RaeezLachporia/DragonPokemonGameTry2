@@ -223,6 +223,7 @@
             BTNP2Details.TabIndex = 1;
             BTNP2Details.Text = "Save Player 2 details";
             BTNP2Details.UseVisualStyleBackColor = true;
+            BTNP2Details.Click += BTNP2Details_Click;
             // 
             // checkBoxP2Earth
             // 
