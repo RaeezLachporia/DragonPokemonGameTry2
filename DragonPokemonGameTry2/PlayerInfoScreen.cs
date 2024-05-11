@@ -15,7 +15,7 @@ namespace DragonPokemonGameTry2
         String[] P1data = new string[2];
         String[] P2data = new string[2];
         int[] P1values = new int[4];
-        int[] P2values= new int[4];
+        int[] P2values = new int[4];
 
         //ice dragon constants
         const String ICE_DRAG_NAME = " ";
@@ -71,7 +71,7 @@ namespace DragonPokemonGameTry2
 
         public void saveP1values()
         {
-            if (checkboxP1fire.Checked==true)
+            if (checkboxP1fire.Checked == true)
             {
                 P1data[0] = TXTPlayer1Name.Text;
                 P1data[1] = TXTPlayer1DragonName.Text;
@@ -81,7 +81,7 @@ namespace DragonPokemonGameTry2
                 P1values[2] = FIRE_DRAG_SPECIAL;
                 P1values[3] = FIRE_DRAG_BLOCK;
             }
-            else if (checkBoxP1Water.Checked==true)
+            else if (checkBoxP1Water.Checked == true)
             {
                 P1data[0] = TXTPlayer1Name.Text;
                 P1data[1] = TXTPlayer1DragonName.Text;
@@ -154,6 +154,11 @@ namespace DragonPokemonGameTry2
                 P2values[2] = EARTH_DRAG_SPECIAL;
                 P2values[3] = EARTH_DRAG_BLOCK;
             }
+        }
+
+        private void BTNP2Details_Click(object sender, EventArgs e)
+        {
+            saveP2values();
         }
     }
 }
