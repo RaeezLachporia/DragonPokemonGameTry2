@@ -54,6 +54,7 @@
             BTNPlay.TabIndex = 1;
             BTNPlay.Text = "Play";
             BTNPlay.UseVisualStyleBackColor = true;
+            BTNPlay.Click += BTNPlay_Click;
             // 
             // BTNBestiary
             // 

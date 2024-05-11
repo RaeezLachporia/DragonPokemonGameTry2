@@ -21,5 +21,10 @@ namespace DragonPokemonGameTry2
         {
 
         }
+
+        private void BTNPlay_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
