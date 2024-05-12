@@ -16,7 +16,9 @@ namespace DragonPokemonGameTry2
         String[] P2data = new string[2];
         int[] P1values = new int[4];
         int[] P2values = new int[4];
-
+        bool iSP1sAVED = false;
+        bool iSP2sAVED = false;
+        
         //ice dragon constants
         const String ICE_DRAG_NAME = " ";
         const int ICE_DRAG_HP = 30;
@@ -47,6 +49,7 @@ namespace DragonPokemonGameTry2
         public PlayerInfoScreen()
         {
             InitializeComponent();
+            BTNStartGame.Enabled = false;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -66,7 +69,9 @@ namespace DragonPokemonGameTry2
 
         private void BTNP1Details_Click(object sender, EventArgs e)
         {
+            iSP1sAVED = true;
             saveP1values();
+            checkclicked();
         }
 
         public void saveP1values()
@@ -158,7 +163,23 @@ namespace DragonPokemonGameTry2
 
         private void BTNP2Details_Click(object sender, EventArgs e)
         {
+            iSP2sAVED = true;
             saveP2values();
+            checkclicked();
+        }
+
+        private void BTNStartGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GameScreen GS = new GameScreen();
+            GS.Show();
+        }
+        public void checkclicked()
+        {
+            if (iSP1sAVED && iSP2sAVED ==true)
+            {
+                BTNStartGame.Enabled = true;
+            }
         }
     }
 }
