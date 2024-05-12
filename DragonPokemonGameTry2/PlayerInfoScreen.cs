@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -128,6 +129,7 @@ namespace DragonPokemonGameTry2
                 P2values[1] = FIRE_DRAG_ATTACK;
                 P2values[2] = FIRE_DRAG_SPECIAL;
                 P2values[3] = FIRE_DRAG_BLOCK;
+                
             }
             else if (checkBoxP2Water.Checked == true)
             {
@@ -138,6 +140,7 @@ namespace DragonPokemonGameTry2
                 P2values[1] = ICE_DRAG_ATTACK;
                 P2values[2] = ICE_DRAG_SPECIAL;
                 P2values[3] = ICE_DRAG_BLOCK;
+                
             }
             else if (checkBoxP2Wind.Checked == true)
             {
@@ -148,6 +151,7 @@ namespace DragonPokemonGameTry2
                 P2values[1] = WIND_DRAG_ATTACK;
                 P2values[2] = WIND_DRAG_SPECIAL;
                 P2values[3] = WIND_DRAG_BLOCK;
+                
             }
             else if (checkBoxP2Earth.Checked == true)
             {
@@ -158,6 +162,7 @@ namespace DragonPokemonGameTry2
                 P2values[1] = EARTH_DRAG_ATTACK;
                 P2values[2] = EARTH_DRAG_SPECIAL;
                 P2values[3] = EARTH_DRAG_BLOCK;
+                
             }
         }
 
