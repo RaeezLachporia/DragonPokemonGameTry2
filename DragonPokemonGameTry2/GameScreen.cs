@@ -26,7 +26,7 @@ namespace DragonPokemonGameTry2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            P1data[0] = textBox1.Text;
         }
 
         private void GameScreen_Load(object sender, EventArgs e)
