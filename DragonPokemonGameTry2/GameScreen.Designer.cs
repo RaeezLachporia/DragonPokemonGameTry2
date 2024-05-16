@@ -31,12 +31,15 @@
             BTNattack = new Button();
             BTNSPecial = new Button();
             BTNBlock = new Button();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             LBLPlayername = new Label();
+            label1 = new Label();
+            LBLDragonName = new Label();
+            LBLDragonAttack = new Label();
+            LBLSPATTACK = new Label();
+            LBLBlock = new Label();
+            LBLdragonHealth = new Label();
             SuspendLayout();
             // 
             // BTNattack
@@ -66,32 +69,9 @@
             BTNBlock.Text = "Block";
             BTNBlock.UseVisualStyleBackColor = true;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(223, 120);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(171, 98);
-            textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(577, 65);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(95, 23);
-            textBox3.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(577, 120);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(171, 98);
-            textBox4.TabIndex = 6;
-            // 
             // textBox5
             // 
-            textBox5.Location = new Point(259, 307);
+            textBox5.Location = new Point(223, 335);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(100, 23);
             textBox5.TabIndex = 7;
@@ -110,21 +90,80 @@
             LBLPlayername.AutoSize = true;
             LBLPlayername.Location = new Point(223, 65);
             LBLPlayername.Name = "LBLPlayername";
-            LBLPlayername.Size = new Size(38, 15);
+            LBLPlayername.Size = new Size(62, 15);
             LBLPlayername.TabIndex = 9;
-            LBLPlayername.Text = "label1";
+            LBLPlayername.Text = "labelname";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(577, 65);
+            label1.Name = "label1";
+            label1.Size = new Size(62, 15);
+            label1.TabIndex = 10;
+            label1.Text = "lablename";
+            label1.Click += label1_Click;
+            // 
+            // LBLDragonName
+            // 
+            LBLDragonName.AutoSize = true;
+            LBLDragonName.Location = new Point(223, 158);
+            LBLDragonName.Name = "LBLDragonName";
+            LBLDragonName.Size = new Size(100, 15);
+            LBLDragonName.TabIndex = 11;
+            LBLDragonName.Text = "labeldragonname";
+            // 
+            // LBLDragonAttack
+            // 
+            LBLDragonAttack.AutoSize = true;
+            LBLDragonAttack.Location = new Point(223, 204);
+            LBLDragonAttack.Name = "LBLDragonAttack";
+            LBLDragonAttack.Size = new Size(102, 15);
+            LBLDragonAttack.TabIndex = 13;
+            LBLDragonAttack.Text = "labeldragonattack";
+            // 
+            // LBLSPATTACK
+            // 
+            LBLSPATTACK.AutoSize = true;
+            LBLSPATTACK.Location = new Point(223, 246);
+            LBLSPATTACK.Name = "LBLSPATTACK";
+            LBLSPATTACK.Size = new Size(81, 15);
+            LBLSPATTACK.TabIndex = 14;
+            LBLSPATTACK.Text = "dragonspecial";
+            // 
+            // LBLBlock
+            // 
+            LBLBlock.AutoSize = true;
+            LBLBlock.Location = new Point(223, 291);
+            LBLBlock.Name = "LBLBlock";
+            LBLBlock.Size = new Size(61, 15);
+            LBLBlock.TabIndex = 15;
+            LBLBlock.Text = "labelblock";
+            LBLBlock.Click += LBLBlock_Click;
+            // 
+            // LBLdragonHealth
+            // 
+            LBLdragonHealth.AutoSize = true;
+            LBLdragonHealth.Location = new Point(223, 120);
+            LBLdragonHealth.Name = "LBLdragonHealth";
+            LBLdragonHealth.Size = new Size(65, 15);
+            LBLdragonHealth.TabIndex = 16;
+            LBLdragonHealth.Text = "labelhealth";
             // 
             // GameScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(903, 608);
+            Controls.Add(LBLdragonHealth);
+            Controls.Add(LBLBlock);
+            Controls.Add(LBLSPATTACK);
+            Controls.Add(LBLDragonAttack);
+            Controls.Add(LBLDragonName);
+            Controls.Add(label1);
             Controls.Add(LBLPlayername);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
             Controls.Add(BTNBlock);
             Controls.Add(BTNSPecial);
             Controls.Add(BTNattack);
@@ -140,11 +179,14 @@
         private Button BTNattack;
         private Button BTNSPecial;
         private Button BTNBlock;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
         private Label LBLPlayername;
+        private Label label1;
+        private Label LBLDragonName;
+        private Label LBLDragonAttack;
+        private Label LBLSPATTACK;
+        private Label LBLBlock;
+        private Label LBLdragonHealth;
     }
 }
