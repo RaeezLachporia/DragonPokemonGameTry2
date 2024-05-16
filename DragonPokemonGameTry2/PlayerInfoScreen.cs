@@ -178,6 +178,12 @@ namespace DragonPokemonGameTry2
             this.Hide();
             GameScreen GS = new GameScreen();
             GS.Show();
+
+            GS.P1values = P1values;
+            GS.P2values = P2values;
+            GS.P1data = P1data;
+            GS.P2data = P2data;
+            //values being passed into the next form
         }
         public void checkclicked()
         {

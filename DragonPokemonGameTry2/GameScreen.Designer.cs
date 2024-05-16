@@ -135,6 +135,7 @@
             Controls.Add(BTNattack);
             Name = "GameScreen";
             Text = "GameScreen";
+            Load += GameScreen_Load;
             ResumeLayout(false);
             PerformLayout();
         }
