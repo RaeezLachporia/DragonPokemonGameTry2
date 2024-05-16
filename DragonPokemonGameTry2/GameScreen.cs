@@ -12,9 +12,17 @@ namespace DragonPokemonGameTry2
 {
     public partial class GameScreen : Form
     {
+
+        int p1Roll;
+        int p2Roll;
+        int Damage;
+        int specialAttack;
+        bool isBlocking = false;
+        bool turnNumber = false;
         public GameScreen()
         {
             InitializeComponent();
+
         }
 
 
@@ -26,12 +34,38 @@ namespace DragonPokemonGameTry2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            P1data[0] = textBox1.Text;
+
         }
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
+            takeInitiative();
+        }
 
+        public int randomRoll()
+        {
+            Random rnd = new Random();
+            return rnd.Next(0, 7);
+        }
+
+        public int takeInitiative()
+        {
+            p1Roll = randomRoll();
+            p2Roll = randomRoll();
+
+            if (p1Roll == p2Roll) 
+            {
+                p1Roll = randomRoll();
+                p2Roll = randomRoll();
+            }
+            if (p1Roll > p2Roll)
+            {
+                return p1Roll;
+            }
+            else
+            {
+                return p2Roll;
+            }
         }
     }
 }

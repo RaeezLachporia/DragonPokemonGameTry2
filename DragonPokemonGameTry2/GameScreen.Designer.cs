@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             BTNattack = new Button();
             BTNSPecial = new Button();
             BTNBlock = new Button();
-            textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
+            LBLPlayername = new Label();
             SuspendLayout();
             // 
             // BTNattack
@@ -67,15 +66,6 @@
             BTNBlock.Text = "Block";
             BTNBlock.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(223, 65);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(95, 23);
-            textBox1.TabIndex = 3;
-            textBox1.Text = "Williams round";
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
             // textBox2
             // 
             textBox2.Location = new Point(223, 120);
@@ -83,7 +73,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(171, 98);
             textBox2.TabIndex = 4;
-            textBox2.Text = "Chopper the Ice dragon\r\n\r\n\r\nHP: 30 \r\n\r\nSpecial attack: Icebound fury ";
             // 
             // textBox3
             // 
@@ -91,7 +80,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(95, 23);
             textBox3.TabIndex = 5;
-            textBox3.Text = "Opponent Tim";
             // 
             // textBox4
             // 
@@ -100,7 +88,6 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(171, 98);
             textBox4.TabIndex = 6;
-            textBox4.Text = "Raptor the Earth Dragon\r\n\r\n\r\nHP: 25\r\n\r\nSpecial attack: Terraquake";
             // 
             // textBox5
             // 
@@ -117,19 +104,27 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(525, 187);
             textBox6.TabIndex = 8;
-            textBox6.Text = resources.GetString("textBox6.Text");
+            // 
+            // LBLPlayername
+            // 
+            LBLPlayername.AutoSize = true;
+            LBLPlayername.Location = new Point(223, 65);
+            LBLPlayername.Name = "LBLPlayername";
+            LBLPlayername.Size = new Size(38, 15);
+            LBLPlayername.TabIndex = 9;
+            LBLPlayername.Text = "label1";
             // 
             // GameScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(903, 608);
+            Controls.Add(LBLPlayername);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(BTNBlock);
             Controls.Add(BTNSPecial);
             Controls.Add(BTNattack);
@@ -145,11 +140,11 @@
         private Button BTNattack;
         private Button BTNSPecial;
         private Button BTNBlock;
-        private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
+        private Label LBLPlayername;
     }
 }
