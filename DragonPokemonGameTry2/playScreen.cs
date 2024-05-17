@@ -15,6 +15,7 @@ namespace DragonPokemonGameTry2
     {
         public playScreen(string[] p1Data, int[] p1Values, string[] p2Data, int[] p2Values)
         {
+            //pulled the arrays from the previous form into the current one
             InitializeComponent();
             Player1names = p1Data;
             Player2names = p2Data;
@@ -27,7 +28,7 @@ namespace DragonPokemonGameTry2
         public string[] Player2names;
         public int[] Player1stats;
         public int[] Player2stats;
-
+        //declaring new variables t be used within the current form 
         int player1Roll;
         int player2Roll;
         int attackDamage;
@@ -37,7 +38,7 @@ namespace DragonPokemonGameTry2
         bool isoncooldown = false;
         private string[] player1names;
 
-        private void playScreen_Load(object sender, EventArgs e)
+        private void playScreen_Load(object sender, EventArgs e)//what happens when the from loads 
         {
             TakeInitiative();
             if (player1Roll > player2Roll)
@@ -57,7 +58,7 @@ namespace DragonPokemonGameTry2
             return r.Next(1, 7);
         }
 
-        public int TakeInitiative()
+        public int TakeInitiative()//this method determines which player gets to go first 
         {
             player1Roll = randomRoll();
             player2Roll = randomRoll();
@@ -77,7 +78,7 @@ namespace DragonPokemonGameTry2
             }
         }
 
-        public void playTurns(int whichplayerTURN)
+        public void playTurns(int whichplayerTURN) //this method determines who is the active player within the form 
         {
             if (whichplayerTURN == 1)
             {
@@ -98,7 +99,7 @@ namespace DragonPokemonGameTry2
                 TXTbattlelog.Text = "It is " + Player2names[0] + "'s" + " turn";
             }
         }
-        public void resetTurn()
+        public void resetTurn()//this method resets the turns and switches between the active players
         {
             TakeInitiative();
 
@@ -112,7 +113,7 @@ namespace DragonPokemonGameTry2
             }
         }
 
-        void attack()
+        void attack()//this method controls the attack function linked to the attack button
         {
             if (player1Roll > player2Roll)
             {
@@ -209,7 +210,7 @@ namespace DragonPokemonGameTry2
 
         }
 
-        void SpecialAttack()
+        void SpecialAttack()//this method is used to control the fuctions for the special attack button
         {
             if (player1Roll > player2Roll)
             {
