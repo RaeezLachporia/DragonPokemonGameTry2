@@ -81,6 +81,7 @@ namespace DragonPokemonGameTry2
         {
             if (whichplayerTURN == 1)
             {
+                GBActivePlayer.Text = "Its your turn";
                 LBLplayername.Text = Player1names[0] + " and " + Player1names[1];
                 LBLdragonHP.Text = "HP: " + Player1stats[0].ToString();
                 LBLEnemyHp.Text = Player2stats[0].ToString();
@@ -89,10 +90,12 @@ namespace DragonPokemonGameTry2
             }
             else if (whichplayerTURN == 2)
             {
+                GBActivePlayer.Text = "Its your turn ";
                 LBLplayername.Text = Player2names[0] + " and " + Player2names[1];
                 LBLdragonHP.Text = Player2stats[0].ToString();
-                LBLEnemyHp.Text = Player1stats.ToString();
+                LBLEnemyHp.Text = Player1stats[0].ToString();
                 GBenemyPlayer.Text = Player1names[0];
+                TXTbattlelog.Text = "It is " + Player2names[0] + "'s" + " turn";
             }
         }
         public void resetTurn()
@@ -129,7 +132,7 @@ namespace DragonPokemonGameTry2
 
                 if (turnNumber == true)
                 {
-
+                    resetTurn();
                     turnNumber = false;
 
                 }
@@ -138,7 +141,7 @@ namespace DragonPokemonGameTry2
                     playTurns(2);
                     turnNumber = true;
                 }
-                TXTbattlelog.Text += Player2names[0] + "Has taken" + attackDamage + "damage points" + "\n";
+                TXTbattlelog.Text +="\n" + Player2names[0] + "Has taken" + attackDamage + "damage points" + "\n";
             }
             else
             {
@@ -155,10 +158,10 @@ namespace DragonPokemonGameTry2
 
                 Player1stats[0] = Player1stats[0] - attackDamage;
 
-                TXTbattlelog.Text += player1names[0] + "Has taken " + attackDamage + "damage points " + "\n";
+                TXTbattlelog.Text += "\n" + Player1names[0] + "Has taken " + attackDamage + "damage points " + "\n";
                 if (turnNumber == true)
                 {
-
+                    resetTurn();
                     turnNumber = false;
                 }
                 else
