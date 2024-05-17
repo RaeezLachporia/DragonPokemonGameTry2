@@ -13,10 +13,10 @@ namespace DragonPokemonGameTry2
 {
     public partial class PlayerInfoScreen : Form
     {
-        String[] P1data = new string[2];
-        String[] P2data = new string[2];
-        int[] P1values = new int[4];
-        int[] P2values = new int[4];
+        public String[] P1data = new string[2];
+       public  String[] P2data = new string[2];
+        public int[] P1values = new int[4];
+       public  int[] P2values = new int[4];
         bool iSP1sAVED = false;
         bool iSP2sAVED = false;
         
@@ -73,6 +73,7 @@ namespace DragonPokemonGameTry2
             iSP1sAVED = true;
             saveP1values();
             checkclicked();
+            MessageBox.Show(P1data[0] + P1data[1]);
         }
 
         public void saveP1values()
@@ -179,10 +180,10 @@ namespace DragonPokemonGameTry2
             playScreen play = new playScreen();
             play.Show();
             //values being passed into the next form
-            play.player1names = P1data;
-            play.player2names = P2data;
-            play.player1stats = P1values;
-            play.player2stats = P2values;
+            play.Player1names = P1data;
+            play.Player2names = P2data;
+            play.Player1stats = P1values;
+            play.Player2stats = P2values;
         }
         public void checkclicked()
         {

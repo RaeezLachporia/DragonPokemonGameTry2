@@ -29,15 +29,22 @@
         private void InitializeComponent()
         {
             GBActivePlayer = new GroupBox();
-            BTNattack = new Button();
-            BTNspecial = new Button();
+            LBLdragonHP = new Label();
             btnBlock = new Button();
-            textBox1 = new TextBox();
+            BTNspecial = new Button();
+            BTNattack = new Button();
+            TXTbattlelog = new TextBox();
+            LBLplayername = new Label();
+            GBenemyPlayer = new GroupBox();
+            LBLEnemyHp = new Label();
+            LBLEdragname = new Label();
             GBActivePlayer.SuspendLayout();
+            GBenemyPlayer.SuspendLayout();
             SuspendLayout();
             // 
             // GBActivePlayer
             // 
+            GBActivePlayer.Controls.Add(LBLdragonHP);
             GBActivePlayer.Controls.Add(btnBlock);
             GBActivePlayer.Controls.Add(BTNspecial);
             GBActivePlayer.Controls.Add(BTNattack);
@@ -48,23 +55,13 @@
             GBActivePlayer.TabStop = false;
             GBActivePlayer.Text = "groupBox1";
             // 
-            // BTNattack
+            // LBLdragonHP
             // 
-            BTNattack.Location = new Point(6, 64);
-            BTNattack.Name = "BTNattack";
-            BTNattack.Size = new Size(174, 81);
-            BTNattack.TabIndex = 0;
-            BTNattack.Text = "Attack";
-            BTNattack.UseVisualStyleBackColor = true;
-            // 
-            // BTNspecial
-            // 
-            BTNspecial.Location = new Point(6, 226);
-            BTNspecial.Name = "BTNspecial";
-            BTNspecial.Size = new Size(174, 81);
-            BTNspecial.TabIndex = 1;
-            BTNspecial.Text = "Special Attack";
-            BTNspecial.UseVisualStyleBackColor = true;
+            LBLdragonHP.AutoSize = true;
+            LBLdragonHP.Location = new Point(38, 65);
+            LBLdragonHP.Name = "LBLdragonHP";
+            LBLdragonHP.Size = new Size(0, 15);
+            LBLdragonHP.TabIndex = 3;
             // 
             // btnBlock
             // 
@@ -75,25 +72,84 @@
             btnBlock.Text = "Block";
             btnBlock.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // BTNspecial
             // 
-            textBox1.Location = new Point(332, 266);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(534, 276);
-            textBox1.TabIndex = 1;
+            BTNspecial.Location = new Point(6, 226);
+            BTNspecial.Name = "BTNspecial";
+            BTNspecial.Size = new Size(174, 81);
+            BTNspecial.TabIndex = 1;
+            BTNspecial.Text = "Special Attack";
+            BTNspecial.UseVisualStyleBackColor = true;
+            // 
+            // BTNattack
+            // 
+            BTNattack.Location = new Point(6, 117);
+            BTNattack.Name = "BTNattack";
+            BTNattack.Size = new Size(174, 81);
+            BTNattack.TabIndex = 0;
+            BTNattack.Text = "Attack";
+            BTNattack.UseVisualStyleBackColor = true;
+            // 
+            // TXTbattlelog
+            // 
+            TXTbattlelog.Location = new Point(332, 266);
+            TXTbattlelog.Multiline = true;
+            TXTbattlelog.Name = "TXTbattlelog";
+            TXTbattlelog.Size = new Size(534, 276);
+            TXTbattlelog.TabIndex = 1;
+            // 
+            // LBLplayername
+            // 
+            LBLplayername.AutoSize = true;
+            LBLplayername.Location = new Point(54, 31);
+            LBLplayername.Name = "LBLplayername";
+            LBLplayername.Size = new Size(69, 15);
+            LBLplayername.TabIndex = 2;
+            LBLplayername.Text = "playername";
+            // 
+            // GBenemyPlayer
+            // 
+            GBenemyPlayer.Controls.Add(LBLEnemyHp);
+            GBenemyPlayer.Controls.Add(LBLEdragname);
+            GBenemyPlayer.Location = new Point(332, 83);
+            GBenemyPlayer.Name = "GBenemyPlayer";
+            GBenemyPlayer.Size = new Size(534, 159);
+            GBenemyPlayer.TabIndex = 3;
+            GBenemyPlayer.TabStop = false;
+            GBenemyPlayer.Text = "groupBox1";
+            // 
+            // LBLEnemyHp
+            // 
+            LBLEnemyHp.AutoSize = true;
+            LBLEnemyHp.Location = new Point(37, 92);
+            LBLEnemyHp.Name = "LBLEnemyHp";
+            LBLEnemyHp.Size = new Size(0, 15);
+            LBLEnemyHp.TabIndex = 1;
+            // 
+            // LBLEdragname
+            // 
+            LBLEdragname.AutoSize = true;
+            LBLEdragname.Location = new Point(27, 39);
+            LBLEdragname.Name = "LBLEdragname";
+            LBLEdragname.Size = new Size(0, 15);
+            LBLEdragname.TabIndex = 0;
             // 
             // playScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(923, 581);
-            Controls.Add(textBox1);
+            Controls.Add(GBenemyPlayer);
+            Controls.Add(LBLplayername);
+            Controls.Add(TXTbattlelog);
             Controls.Add(GBActivePlayer);
             Name = "playScreen";
             Text = "playScreen";
             Load += playScreen_Load;
             GBActivePlayer.ResumeLayout(false);
+            GBActivePlayer.PerformLayout();
+            GBenemyPlayer.ResumeLayout(false);
+            GBenemyPlayer.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,6 +160,11 @@
         private Button btnBlock;
         private Button BTNspecial;
         private Button BTNattack;
-        private TextBox textBox1;
+        private TextBox TXTbattlelog;
+        private Label LBLdragonHP;
+        private Label LBLplayername;
+        private GroupBox GBenemyPlayer;
+        private Label LBLEnemyHp;
+        private Label LBLEdragname;
     }
 }
