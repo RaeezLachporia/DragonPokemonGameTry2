@@ -238,6 +238,7 @@ namespace DragonPokemonGameTry2
                     playTurns(2);
                     turnNumber = true;
                 }
+                TXTbattlelog.Text = (Player1names[0] + " has used their special attack");
             }
             else
             {
@@ -262,6 +263,7 @@ namespace DragonPokemonGameTry2
                         playTurns(1);
                         turnNumber = true;
                     }
+                    TXTbattlelog.Text = (Player2names[0] + " has used their special attack");
                 }
             }
         }
