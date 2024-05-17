@@ -21,7 +21,7 @@ namespace DragonPokemonGameTry2
             Player1stats = p1Values;
             Player2stats = p2Values;
         }
-        
+
 
         public string[] Player1names;
         public string[] Player2names;
@@ -40,7 +40,7 @@ namespace DragonPokemonGameTry2
         private void playScreen_Load(object sender, EventArgs e)
         {
             TakeInitiative();
-            if (player1Roll>player2Roll)
+            if (player1Roll > player2Roll)
             {
                 playTurns(1);
             }
@@ -81,15 +81,15 @@ namespace DragonPokemonGameTry2
         {
             if (whichplayerTURN == 1)
             {
-                LBLplayername.Text = Player1names[0] + "and" + Player1names[1];
-                LBLdragonHP.Text = Player1stats[0].ToString();
+                LBLplayername.Text = Player1names[0] + " and " + Player1names[1];
+                LBLdragonHP.Text = "HP: " + Player1stats[0].ToString();
                 LBLEnemyHp.Text = Player2stats[0].ToString();
                 GBenemyPlayer.Text = Player2names[0];
-
+                TXTbattlelog.Text = "It is " + Player1names[0] + "'s" + " turn";
             }
             else if (whichplayerTURN == 2)
             {
-                LBLplayername.Text = Player2names[0] + "and " + Player2names[1];
+                LBLplayername.Text = Player2names[0] + " and " + Player2names[1];
                 LBLdragonHP.Text = Player2stats[0].ToString();
                 LBLEnemyHp.Text = Player1stats.ToString();
                 GBenemyPlayer.Text = Player1names[0];
@@ -129,7 +129,7 @@ namespace DragonPokemonGameTry2
 
                 if (turnNumber == true)
                 {
-                    
+
                     turnNumber = false;
 
                 }
@@ -143,10 +143,10 @@ namespace DragonPokemonGameTry2
             else
             {
                 attackDamage = Player2stats[1];
-                if(isblocking == true)
+                if (isblocking == true)
                 {
                     attackDamage = attackDamage - Player2stats[3];
-                    if (attackDamage<0)
+                    if (attackDamage < 0)
                     {
                         attackDamage = 0;
                     }
@@ -158,7 +158,7 @@ namespace DragonPokemonGameTry2
                 TXTbattlelog.Text += player1names[0] + "Has taken " + attackDamage + "damage points " + "\n";
                 if (turnNumber == true)
                 {
-                    
+
                     turnNumber = false;
                 }
                 else
@@ -171,7 +171,7 @@ namespace DragonPokemonGameTry2
 
         void block() //method used to tell if a player is blocking and acts accordingly 
         {
-            if (player1Roll>player2Roll)
+            if (player1Roll > player2Roll)
             {
                 isblocking = true;
                 if (turnNumber == true)
@@ -194,7 +194,7 @@ namespace DragonPokemonGameTry2
                 {
                     resetTurn();
                     turnNumber = false;
-                    isblocking= false;
+                    isblocking = false;
                 }
                 else
                 {
@@ -203,27 +203,27 @@ namespace DragonPokemonGameTry2
                 }
             }
 
-            
+
         }
 
         void SpecialAttack()
         {
-            if (player1Roll> player2Roll)
+            if (player1Roll > player2Roll)
             {
                 specialDamage = Player1stats[2];
-                Player2stats[0] = Player2stats[0] - specialDamage; 
+                Player2stats[0] = Player2stats[0] - specialDamage;
 
-                if(isblocking==true)
+                if (isblocking == true)
                 {
                     specialDamage = specialDamage - Player2stats[3];
 
-                    if(specialDamage<0) 
+                    if (specialDamage < 0)
                     {
                         specialDamage = 0;
                     }
                     isblocking = false;
                 }
-                isblocking= false;
+                isblocking = false;
 
                 if (turnNumber == true)
                 {
@@ -240,18 +240,43 @@ namespace DragonPokemonGameTry2
             {
                 specialDamage = Player2stats[2];
                 Player1stats[0] = Player1stats[0] - specialDamage;
-                if (isblocking==true)
+                if (isblocking == true)
                 {
                     specialDamage = specialDamage - Player2stats[3];
-                    if (specialDamage<0)
+                    if (specialDamage < 0)
                     {
                         specialDamage = 0;
                     }
                     isblocking = false;
+
+                    if (turnNumber == true)
+                    {
+                        resetTurn();
+                        turnNumber = false;
+                    }
+                    else
+                    {
+                        playTurns(1);
+                        turnNumber = true;
+                    }
                 }
             }
         }
 
+        private void BTNattack_Click(object sender, EventArgs e)
+        {
+            attack();
+        }
+
+        private void BTNspecial_Click(object sender, EventArgs e)
+        {
+            SpecialAttack();
+        }
+
+        private void btnBlock_Click(object sender, EventArgs e)
+        {
+            block();    
+        }
     }
 
 

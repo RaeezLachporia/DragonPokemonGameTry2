@@ -71,6 +71,7 @@
             btnBlock.TabIndex = 2;
             btnBlock.Text = "Block";
             btnBlock.UseVisualStyleBackColor = true;
+            btnBlock.Click += btnBlock_Click;
             // 
             // BTNspecial
             // 
@@ -80,6 +81,7 @@
             BTNspecial.TabIndex = 1;
             BTNspecial.Text = "Special Attack";
             BTNspecial.UseVisualStyleBackColor = true;
+            BTNspecial.Click += BTNspecial_Click;
             // 
             // BTNattack
             // 
@@ -89,6 +91,7 @@
             BTNattack.TabIndex = 0;
             BTNattack.Text = "Attack";
             BTNattack.UseVisualStyleBackColor = true;
+            BTNattack.Click += BTNattack_Click;
             // 
             // TXTbattlelog
             // 
