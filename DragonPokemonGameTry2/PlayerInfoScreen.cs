@@ -177,13 +177,10 @@ namespace DragonPokemonGameTry2
         private void BTNStartGame_Click(object sender, EventArgs e)
         {
             this.Hide();
-            playScreen play = new playScreen();
+            playScreen play = new playScreen(P1data, P1values, P2data, P2values);
             play.Show();
             //values being passed into the next form
-            play.Player1names = P1data;
-            play.Player2names = P2data;
-            play.Player1stats = P1values;
-            play.Player2stats = P2values;
+            
         }
         public void checkclicked()
         {

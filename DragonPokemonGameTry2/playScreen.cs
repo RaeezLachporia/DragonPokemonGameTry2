@@ -13,16 +13,20 @@ namespace DragonPokemonGameTry2
 {
     public partial class playScreen : Form
     {
-        public playScreen()
+        public playScreen(string[] p1Data, int[] p1Values, string[] p2Data, int[] p2Values)
         {
             InitializeComponent();
+            Player1names = p1Data;
+            Player2names = p2Data;
+            Player1stats = p1Values;
+            Player2stats = p2Values;
         }
+        
 
-
-        public string[] Player1names { get; set; }
-        public string[] Player2names { get; set; }
-        public int[] Player1stats { get; set; }
-        public int[] Player2stats { get; set; }
+        public string[] Player1names;
+        public string[] Player2names;
+        public int[] Player1stats;
+        public int[] Player2stats;
 
         int player1Roll;
         int player2Roll;
@@ -36,7 +40,14 @@ namespace DragonPokemonGameTry2
         private void playScreen_Load(object sender, EventArgs e)
         {
             TakeInitiative();
-            playTurns(1);
+            if (player1Roll>player2Roll)
+            {
+                playTurns(1);
+            }
+            else
+            {
+                playTurns(2);
+            }
         }
 
         public int randomRoll()//rolls dice to see which player goes first 
@@ -76,7 +87,7 @@ namespace DragonPokemonGameTry2
                 GBenemyPlayer.Text = Player2names[0];
 
             }
-            else
+            else if (whichplayerTURN == 2)
             {
                 LBLplayername.Text = Player2names[0] + "and " + Player2names[1];
                 LBLdragonHP.Text = Player2stats[0].ToString();
@@ -118,7 +129,7 @@ namespace DragonPokemonGameTry2
 
                 if (turnNumber == true)
                 {
-                    resetTurn();
+                    
                     turnNumber = false;
 
                 }
@@ -126,6 +137,117 @@ namespace DragonPokemonGameTry2
                 {
                     playTurns(2);
                     turnNumber = true;
+                }
+                TXTbattlelog.Text += Player2names[0] + "Has taken" + attackDamage + "damage points" + "\n";
+            }
+            else
+            {
+                attackDamage = Player2stats[1];
+                if(isblocking == true)
+                {
+                    attackDamage = attackDamage - Player2stats[3];
+                    if (attackDamage<0)
+                    {
+                        attackDamage = 0;
+                    }
+                    isblocking = false;
+                }
+
+                Player1stats[0] = Player1stats[0] - attackDamage;
+
+                TXTbattlelog.Text += player1names[0] + "Has taken " + attackDamage + "damage points " + "\n";
+                if (turnNumber == true)
+                {
+                    
+                    turnNumber = false;
+                }
+                else
+                {
+                    playTurns(1);
+                    turnNumber = true;
+                }
+            }
+        }
+
+        void block() //method used to tell if a player is blocking and acts accordingly 
+        {
+            if (player1Roll>player2Roll)
+            {
+                isblocking = true;
+                if (turnNumber == true)
+                {
+                    turnNumber = false;
+                    isblocking = false;
+                }
+
+                else
+                {
+                    playTurns(2);
+                    turnNumber = true;
+                }
+            }
+            else
+            {
+                isblocking = true;
+
+                if (turnNumber == true)
+                {
+                    resetTurn();
+                    turnNumber = false;
+                    isblocking= false;
+                }
+                else
+                {
+                    playTurns(2);
+                    turnNumber = true;
+                }
+            }
+
+            
+        }
+
+        void SpecialAttack()
+        {
+            if (player1Roll> player2Roll)
+            {
+                specialDamage = Player1stats[2];
+                Player2stats[0] = Player2stats[0] - specialDamage; 
+
+                if(isblocking==true)
+                {
+                    specialDamage = specialDamage - Player2stats[3];
+
+                    if(specialDamage<0) 
+                    {
+                        specialDamage = 0;
+                    }
+                    isblocking = false;
+                }
+                isblocking= false;
+
+                if (turnNumber == true)
+                {
+                    resetTurn();
+                    turnNumber = false;
+                }
+                else
+                {
+                    playTurns(2);
+                    turnNumber = true;
+                }
+            }
+            else
+            {
+                specialDamage = Player2stats[2];
+                Player1stats[0] = Player1stats[0] - specialDamage;
+                if (isblocking==true)
+                {
+                    specialDamage = specialDamage - Player2stats[3];
+                    if (specialDamage<0)
+                    {
+                        specialDamage = 0;
+                    }
+                    isblocking = false;
                 }
             }
         }
