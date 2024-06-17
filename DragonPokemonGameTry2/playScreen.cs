@@ -283,7 +283,35 @@ namespace DragonPokemonGameTry2
         {
             block();    
         }
+
+        void Victory()
+        {
+            if (Player1stats[0]<=0)
+            {
+                TXTbattlelog.Text = Player2names[0] + " Is the winner of the fight!";
+                BTNattack.Enabled = false;
+                btnBlock.Enabled = false;
+                BTNspecial.Enabled = false;
+
+                this.Hide();
+                PlayerInfoScreen pinfo = new PlayerInfoScreen();
+                pinfo.Show();
+            }
+            else if (Player2stats[0]<=0)
+            {
+                TXTbattlelog.Text = Player1names[0] + " is the winner of the fight!";
+                BTNattack.Enabled = false;
+                btnBlock.Enabled = false;
+                BTNspecial.Enabled = false;
+                this.Hide();
+                PlayerInfoScreen pinfo = new PlayerInfoScreen();
+                pinfo.Show();
+            }
+        }
     }
+
+     
+    
 
 
 }
