@@ -41,6 +41,7 @@ namespace DragonPokemonGameTry2
         private void playScreen_Load(object sender, EventArgs e)//what happens when the from loads 
         {
             TakeInitiative();
+            BTNRest.Hide();
             if (player1Roll > player2Roll)
             {
                 playTurns(1);
@@ -142,7 +143,7 @@ namespace DragonPokemonGameTry2
                     playTurns(2);
                     turnNumber = true;
                 }
-                TXTbattlelog.Text +="\n" + Player2names[0] + "Has taken" + attackDamage + "damage points" + "\n";
+                TXTbattlelog.Text += "\n" + Player2names[0] + "Has taken" + attackDamage + "damage points" + "\n";
             }
             else
             {
@@ -229,6 +230,8 @@ namespace DragonPokemonGameTry2
                 }
                 isblocking = false;
 
+                isoncooldown = true;
+
                 if (turnNumber == true)
                 {
                     resetTurn();
@@ -254,6 +257,7 @@ namespace DragonPokemonGameTry2
                     }
                     isblocking = false;
 
+                    isoncooldown = true;
                     if (turnNumber == true)
                     {
                         resetTurn();
@@ -281,12 +285,12 @@ namespace DragonPokemonGameTry2
 
         private void btnBlock_Click(object sender, EventArgs e)
         {
-            block();    
+            block();
         }
 
         void Victory()
         {
-            if (Player1stats[0]<=0)
+            if (Player1stats[0] <= 0)
             {
                 TXTbattlelog.Text = Player2names[0] + " Is the winner of the fight!";
                 BTNattack.Enabled = false;
@@ -297,7 +301,7 @@ namespace DragonPokemonGameTry2
                 PlayerInfoScreen pinfo = new PlayerInfoScreen();
                 pinfo.Show();
             }
-            else if (Player2stats[0]<=0)
+            else if (Player2stats[0] <= 0)
             {
                 TXTbattlelog.Text = Player1names[0] + " is the winner of the fight!";
                 BTNattack.Enabled = false;
@@ -308,10 +312,43 @@ namespace DragonPokemonGameTry2
                 pinfo.Show();
             }
         }
+
+        void Resting(bool isresting)
+        {
+            if (player1Roll> player2Roll & isresting == true)
+            {
+                if (isoncooldown == true)
+                {
+                    BTNRest.Show();
+                    btnBlock.Enabled=false;
+                    BTNattack.Enabled=false;
+                    BTNspecial.Enabled=false;
+                }
+                else 
+                {
+                    playTurns(2);
+                }
+            } 
+            else
+            {
+                if (isoncooldown ==  true)
+                {
+                    BTNRest.Show();
+                    btnBlock.Enabled = false;
+                    BTNattack.Enabled = false;
+                    BTNspecial.Enabled = false;
+                }
+                else
+                {
+                    playTurns(1);
+                }
+            }
+
+        }
     }
 
-     
-    
+
+
 
 
 }

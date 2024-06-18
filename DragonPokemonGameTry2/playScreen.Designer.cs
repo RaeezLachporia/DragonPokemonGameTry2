@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             GBActivePlayer = new GroupBox();
+            BTNRest = new Button();
             LBLdragonHP = new Label();
             btnBlock = new Button();
             BTNspecial = new Button();
@@ -44,16 +45,26 @@
             // 
             // GBActivePlayer
             // 
+            GBActivePlayer.Controls.Add(BTNRest);
             GBActivePlayer.Controls.Add(LBLdragonHP);
             GBActivePlayer.Controls.Add(btnBlock);
             GBActivePlayer.Controls.Add(BTNspecial);
             GBActivePlayer.Controls.Add(BTNattack);
             GBActivePlayer.Location = new Point(29, 83);
             GBActivePlayer.Name = "GBActivePlayer";
-            GBActivePlayer.Size = new Size(257, 459);
+            GBActivePlayer.Size = new Size(297, 459);
             GBActivePlayer.TabIndex = 0;
             GBActivePlayer.TabStop = false;
             GBActivePlayer.Text = "groupBox1";
+            // 
+            // BTNRest
+            // 
+            BTNRest.Location = new Point(186, 226);
+            BTNRest.Name = "BTNRest";
+            BTNRest.Size = new Size(105, 81);
+            BTNRest.TabIndex = 4;
+            BTNRest.Text = "Rest";
+            BTNRest.UseVisualStyleBackColor = true;
             // 
             // LBLdragonHP
             // 
@@ -65,7 +76,7 @@
             // 
             // btnBlock
             // 
-            btnBlock.Location = new Point(6, 360);
+            btnBlock.Location = new Point(6, 345);
             btnBlock.Name = "btnBlock";
             btnBlock.Size = new Size(174, 81);
             btnBlock.TabIndex = 2;
@@ -169,5 +180,6 @@
         private GroupBox GBenemyPlayer;
         private Label LBLEnemyHp;
         private Label LBLEdragname;
+        private Button BTNRest;
     }
 }
