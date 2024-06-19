@@ -59,5 +59,15 @@ namespace DragonPokemonGameTry2.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fran_vegas_raising_banners_web {
+            get {
+                object obj = ResourceManager.GetObject("fran-vegas-raising-banners-web", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
