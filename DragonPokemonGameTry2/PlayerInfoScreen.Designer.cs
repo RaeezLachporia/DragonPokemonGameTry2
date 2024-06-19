@@ -65,7 +65,7 @@
             GBP1details.Controls.Add(label2);
             GBP1details.Controls.Add(label1);
             GBP1details.Controls.Add(GBP1dragontype);
-            GBP1details.Location = new Point(44, 62);
+            GBP1details.Location = new Point(42, 12);
             GBP1details.Name = "GBP1details";
             GBP1details.Size = new Size(301, 438);
             GBP1details.TabIndex = 0;
@@ -177,7 +177,7 @@
             GBP2details.Controls.Add(TXTPlayer2Name);
             GBP2details.Controls.Add(label4);
             GBP2details.Controls.Add(label3);
-            GBP2details.Location = new Point(368, 62);
+            GBP2details.Location = new Point(468, 12);
             GBP2details.Name = "GBP2details";
             GBP2details.Size = new Size(301, 438);
             GBP2details.TabIndex = 1;
@@ -283,7 +283,7 @@
             // 
             // BTNStartGame
             // 
-            BTNStartGame.Location = new Point(230, 545);
+            BTNStartGame.Location = new Point(114, 456);
             BTNStartGame.Name = "BTNStartGame";
             BTNStartGame.Size = new Size(178, 52);
             BTNStartGame.TabIndex = 2;
@@ -293,7 +293,7 @@
             // 
             // BTNBack
             // 
-            BTNBack.Location = new Point(496, 545);
+            BTNBack.Location = new Point(550, 456);
             BTNBack.Name = "BTNBack";
             BTNBack.Size = new Size(129, 52);
             BTNBack.TabIndex = 3;
@@ -305,11 +305,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.enara_pombar_monte_dragon;
-            ClientSize = new Size(796, 625);
+            ClientSize = new Size(798, 527);
             Controls.Add(BTNBack);
             Controls.Add(BTNStartGame);
             Controls.Add(GBP2details);
             Controls.Add(GBP1details);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "PlayerInfoScreen";
             Text = "PlayerInfoScreen";
             Load += PlayerInfoScreen_Load;
