@@ -24,11 +24,20 @@ namespace DragonPokemonGameTry2
 
         private void BTNPlay_Click(object sender, EventArgs e)
         {
-           this.Hide();
+            this.Hide();
 
             PlayerInfoScreen PIF = new PlayerInfoScreen();
 
             PIF.Show();
+        }
+
+        private void BTNBestiary_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Bestiary beast = new Bestiary();
+
+            beast.Show();
         }
     }
 }

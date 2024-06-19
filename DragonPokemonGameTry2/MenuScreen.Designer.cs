@@ -64,6 +64,7 @@
             BTNBestiary.TabIndex = 2;
             BTNBestiary.Text = "Bestiary";
             BTNBestiary.UseVisualStyleBackColor = true;
+            BTNBestiary.Click += BTNBestiary_Click;
             // 
             // BTNQuit
             // 

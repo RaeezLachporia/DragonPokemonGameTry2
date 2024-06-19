@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Bestiary";
+            SuspendLayout();
+            // 
+            // Bestiary
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.fran_vegas_raising_banners_web;
+            ClientSize = new Size(798, 679);
+            Name = "Bestiary";
+            Text = "Bestiary";
+            ResumeLayout(false);
         }
 
         #endregion
