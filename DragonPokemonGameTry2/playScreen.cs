@@ -315,23 +315,23 @@ namespace DragonPokemonGameTry2
 
         void Resting(bool isresting)
         {
-            if (player1Roll> player2Roll & isresting == true)
+            if (player1Roll > player2Roll & isresting == true)
             {
                 if (isoncooldown == true)
                 {
                     BTNRest.Show();
-                    btnBlock.Enabled=false;
-                    BTNattack.Enabled=false;
-                    BTNspecial.Enabled=false;
+                    btnBlock.Enabled = false;
+                    BTNattack.Enabled = false;
+                    BTNspecial.Enabled = false;
                 }
-                else 
+                else
                 {
                     playTurns(2);
                 }
-            } 
+            }
             else
             {
-                if (isoncooldown ==  true)
+                if (isoncooldown == true)
                 {
                     BTNRest.Show();
                     btnBlock.Enabled = false;

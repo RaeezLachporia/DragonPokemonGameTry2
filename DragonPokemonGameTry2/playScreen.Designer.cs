@@ -45,6 +45,7 @@
             // 
             // GBActivePlayer
             // 
+            GBActivePlayer.BackColor = Color.Transparent;
             GBActivePlayer.Controls.Add(BTNRest);
             GBActivePlayer.Controls.Add(LBLdragonHP);
             GBActivePlayer.Controls.Add(btnBlock);
@@ -106,10 +107,10 @@
             // 
             // TXTbattlelog
             // 
-            TXTbattlelog.Location = new Point(332, 266);
+            TXTbattlelog.Location = new Point(332, 399);
             TXTbattlelog.Multiline = true;
             TXTbattlelog.Name = "TXTbattlelog";
-            TXTbattlelog.Size = new Size(534, 276);
+            TXTbattlelog.Size = new Size(534, 143);
             TXTbattlelog.TabIndex = 1;
             // 
             // LBLplayername
@@ -123,6 +124,7 @@
             // 
             // GBenemyPlayer
             // 
+            GBenemyPlayer.BackColor = Color.Transparent;
             GBenemyPlayer.Controls.Add(LBLEnemyHp);
             GBenemyPlayer.Controls.Add(LBLEdragname);
             GBenemyPlayer.Location = new Point(332, 83);
@@ -152,11 +154,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.satyaki_sarkar_sketch_lotr_copy;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(923, 581);
             Controls.Add(GBenemyPlayer);
             Controls.Add(LBLplayername);
             Controls.Add(TXTbattlelog);
             Controls.Add(GBActivePlayer);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "playScreen";
             Text = "playScreen";
             Load += playScreen_Load;

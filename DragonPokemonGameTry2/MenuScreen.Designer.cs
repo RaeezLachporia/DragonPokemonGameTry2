@@ -85,6 +85,7 @@
             Controls.Add(BTNBestiary);
             Controls.Add(BTNPlay);
             Controls.Add(textBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MenuScreen";
             Text = "MenuScreen";
             ResumeLayout(false);

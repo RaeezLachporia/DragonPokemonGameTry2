@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fran_vegas_raising_banners_web;
             ClientSize = new Size(798, 679);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Bestiary";
             Text = "Bestiary";
             ResumeLayout(false);
