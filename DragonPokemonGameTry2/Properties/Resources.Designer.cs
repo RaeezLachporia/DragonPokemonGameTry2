@@ -63,6 +63,16 @@ namespace DragonPokemonGameTry2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _22th_c_painter_new_1_0000_100 {
+            get {
+                object obj = ResourceManager.GetObject("22th-c-painter-new-1-0000-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fran_vegas_raising_banners_web {
             get {
                 object obj = ResourceManager.GetObject("fran-vegas-raising-banners-web", resourceCulture);

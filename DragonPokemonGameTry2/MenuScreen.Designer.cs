@@ -37,7 +37,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(301, 46);
+            textBox1.Location = new Point(235, 39);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(279, 52);
@@ -48,7 +48,7 @@
             // 
             // BTNPlay
             // 
-            BTNPlay.Location = new Point(365, 176);
+            BTNPlay.Location = new Point(297, 123);
             BTNPlay.Name = "BTNPlay";
             BTNPlay.Size = new Size(149, 77);
             BTNPlay.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // BTNBestiary
             // 
-            BTNBestiary.Location = new Point(365, 317);
+            BTNBestiary.Location = new Point(297, 232);
             BTNBestiary.Name = "BTNBestiary";
             BTNBestiary.Size = new Size(149, 77);
             BTNBestiary.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // BTNQuit
             // 
-            BTNQuit.Location = new Point(365, 471);
+            BTNQuit.Location = new Point(297, 340);
             BTNQuit.Name = "BTNQuit";
             BTNQuit.Size = new Size(149, 77);
             BTNQuit.TabIndex = 3;
@@ -79,7 +79,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(934, 632);
+            BackgroundImage = Properties.Resources._22th_c_painter_new_1_0000_100;
+            ClientSize = new Size(801, 429);
             Controls.Add(BTNQuit);
             Controls.Add(BTNBestiary);
             Controls.Add(BTNPlay);
