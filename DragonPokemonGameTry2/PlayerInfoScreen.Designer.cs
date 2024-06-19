@@ -299,6 +299,7 @@
             BTNBack.TabIndex = 3;
             BTNBack.Text = "Back";
             BTNBack.UseVisualStyleBackColor = true;
+            BTNBack.Click += BTNBack_Click;
             // 
             // PlayerInfoScreen
             // 

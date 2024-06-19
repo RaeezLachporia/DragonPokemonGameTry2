@@ -121,13 +121,25 @@
   <data name="22th-c-painter-new-1-0000-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\22th-c-painter-new-1-0000-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="satyaki-sarkar-sketch-lotr-copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satyaki-sarkar-sketch-lotr-copy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pontus-skoglund-wood-dragon-pixel (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pontus-skoglund-wood-dragon-pixel (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="enara-pombar-monte-dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enara-pombar-monte-dragon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fran-vegas-raising-banners-web" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fran-vegas-raising-banners-web.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="satyaki-sarkar-sketch-lotr-copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\satyaki-sarkar-sketch-lotr-copy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pikaso_texttoimage_Regal-pixel-art-dragon-coiled-around-an-ancient-Ja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pikaso_texttoimage_Regal-pixel-art-dragon-coiled-around-an-ancient-Ja.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixelAsianDragon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixelAsianDragon (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pikaso_texttoimage_pixel-art-Enormous-emerald-and-gold-dragon-with-gr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pikaso_texttoimage_pixel-art-Enormous-emerald-and-gold-dragon-with-gr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

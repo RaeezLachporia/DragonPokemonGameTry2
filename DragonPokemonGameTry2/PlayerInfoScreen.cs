@@ -194,5 +194,12 @@ namespace DragonPokemonGameTry2
         {
 
         }
+
+        private void BTNBack_Click(object sender, EventArgs e)
+        {
+            MenuScreen menuScreen = new MenuScreen();
+            this.Hide();
+            menuScreen.Show();
+        }
     }
 }

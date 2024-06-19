@@ -16,5 +16,22 @@ namespace DragonPokemonGameTry2
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btnback_Click(object sender, EventArgs e)
+        {
+            MenuScreen menuScreen = new MenuScreen();
+            this.Hide();
+            menuScreen.Show();
+        }
     }
 }

@@ -93,6 +93,46 @@ namespace DragonPokemonGameTry2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pikaso_texttoimage_pixel_art_Enormous_emerald_and_gold_dragon_with_gr {
+            get {
+                object obj = ResourceManager.GetObject("pikaso_texttoimage_pixel-art-Enormous-emerald-and-gold-dragon-with-gr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pikaso_texttoimage_Regal_pixel_art_dragon_coiled_around_an_ancient_Ja {
+            get {
+                object obj = ResourceManager.GetObject("pikaso_texttoimage_Regal-pixel-art-dragon-coiled-around-an-ancient-Ja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pixelAsianDragon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("pixelAsianDragon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pontus_skoglund_wood_dragon_pixel__1_ {
+            get {
+                object obj = ResourceManager.GetObject("pontus-skoglund-wood-dragon-pixel (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap satyaki_sarkar_sketch_lotr_copy {
             get {
                 object obj = ResourceManager.GetObject("satyaki-sarkar-sketch-lotr-copy", resourceCulture);
