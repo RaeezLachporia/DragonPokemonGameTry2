@@ -73,6 +73,16 @@ namespace DragonPokemonGameTry2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enara_pombar_monte_dragon {
+            get {
+                object obj = ResourceManager.GetObject("enara-pombar-monte-dragon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fran_vegas_raising_banners_web {
             get {
                 object obj = ResourceManager.GetObject("fran-vegas-raising-banners-web", resourceCulture);

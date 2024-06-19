@@ -118,10 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="22th-c-painter-new-1-0000-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\22th-c-painter-new-1-0000-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fran-vegas-raising-banners-web" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fran-vegas-raising-banners-web.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="22th-c-painter-new-1-0000-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\22th-c-painter-new-1-0000-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="enara-pombar-monte-dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enara-pombar-monte-dragon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

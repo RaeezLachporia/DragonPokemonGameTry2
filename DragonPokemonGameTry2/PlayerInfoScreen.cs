@@ -14,12 +14,12 @@ namespace DragonPokemonGameTry2
     public partial class PlayerInfoScreen : Form
     {
         public String[] P1data = new string[2];
-       public  String[] P2data = new string[2];
+        public String[] P2data = new string[2];
         public int[] P1values = new int[4];
-       public  int[] P2values = new int[4];
+        public int[] P2values = new int[4];
         bool iSP1sAVED = false;
         bool iSP2sAVED = false;
-        
+
         //ice dragon constants
         const String ICE_DRAG_NAME = " ";
         const int ICE_DRAG_HP = 30;
@@ -130,7 +130,7 @@ namespace DragonPokemonGameTry2
                 P2values[1] = FIRE_DRAG_ATTACK;
                 P2values[2] = FIRE_DRAG_SPECIAL;
                 P2values[3] = FIRE_DRAG_BLOCK;
-                
+
             }
             else if (checkBoxP2Water.Checked == true)
             {
@@ -141,7 +141,7 @@ namespace DragonPokemonGameTry2
                 P2values[1] = ICE_DRAG_ATTACK;
                 P2values[2] = ICE_DRAG_SPECIAL;
                 P2values[3] = ICE_DRAG_BLOCK;
-                
+
             }
             else if (checkBoxP2Wind.Checked == true)
             {
@@ -152,7 +152,7 @@ namespace DragonPokemonGameTry2
                 P2values[1] = WIND_DRAG_ATTACK;
                 P2values[2] = WIND_DRAG_SPECIAL;
                 P2values[3] = WIND_DRAG_BLOCK;
-                
+
             }
             else if (checkBoxP2Earth.Checked == true)
             {
@@ -163,7 +163,7 @@ namespace DragonPokemonGameTry2
                 P2values[1] = EARTH_DRAG_ATTACK;
                 P2values[2] = EARTH_DRAG_SPECIAL;
                 P2values[3] = EARTH_DRAG_BLOCK;
-                
+
             }
         }
 
@@ -180,14 +180,19 @@ namespace DragonPokemonGameTry2
             playScreen play = new playScreen(P1data, P1values, P2data, P2values);
             play.Show();
             //values being passed into the next form
-            
+
         }
         public void checkclicked()
         {
-            if (iSP1sAVED && iSP2sAVED ==true)
+            if (iSP1sAVED && iSP2sAVED == true)
             {
                 BTNStartGame.Enabled = true;
             }
+        }
+
+        private void PlayerInfoScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

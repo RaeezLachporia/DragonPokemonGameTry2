@@ -304,13 +304,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(943, 625);
+            BackgroundImage = Properties.Resources.enara_pombar_monte_dragon;
+            ClientSize = new Size(796, 625);
             Controls.Add(BTNBack);
             Controls.Add(BTNStartGame);
             Controls.Add(GBP2details);
             Controls.Add(GBP1details);
             Name = "PlayerInfoScreen";
             Text = "PlayerInfoScreen";
+            Load += PlayerInfoScreen_Load;
             GBP1details.ResumeLayout(false);
             GBP1details.PerformLayout();
             GBP1dragontype.ResumeLayout(false);
